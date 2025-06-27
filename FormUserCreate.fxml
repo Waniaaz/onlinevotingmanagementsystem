@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      alignment="TOP_CENTER"
+      spacing="20"
+      style="-fx-background-color: #f9f9f9;"
+      fx:controller="vms.pkg1.FormUserCreateController">
+
+    <!-- Header with navigation links -->
+    <HBox spacing="10"  alignment="CENTER_LEFT"
+          style="-fx-background-color: #333;">
+        <Button text="Logout" style="-fx-background-color: transparent; -fx-text-fill: white;" onAction="#gotoLogin"/>
+        <Button text="Real Time Data" style="-fx-background-color: transparent; -fx-text-fill: white;" onAction="#gotoData"/>
+    </HBox>
+
+    <Label text="Create New User" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100" />
+            <ColumnConstraints halignment="LEFT" minWidth="200" />
+        </columnConstraints>
+
+        <!-- User Name -->
+        <Label text="User Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextField fx:id="txtUserName" promptText="Enter user name"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+        <!-- User Password -->
+        <Label fx:id="lblPassword" text="User Password:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <PasswordField fx:id="txtUserPassword" promptText="Enter password"
+                       GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        <!-- User Role -->
+        <Label text="User Role:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <ComboBox fx:id="comboUserRole" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    </GridPane>
+
+    <!-- Submit Button -->
+    <Button text="Create User" fx:id="btnCreateUser"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"
+            prefWidth="150" />
+
+</VBox>

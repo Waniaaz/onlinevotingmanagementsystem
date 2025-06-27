@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="vms.pkg1.FormVoterDataController" prefWidth="400" prefHeight="300">
+    <!-- Header with navigation links -->
+    <HBox spacing="10"  alignment="CENTER_LEFT"
+          style="-fx-background-color: #333;">
+        <Button text="Logout" style="-fx-background-color: transparent; -fx-text-fill: white;" onAction="#gotoLogin"/>
+        <Button text="Cast Vote" style="-fx-background-color: transparent; -fx-text-fill: white;" onAction="#gotoCastVote"/>
+    </HBox>
+    <TableView fx:id="voteTable" layoutX="0" layoutY="0" prefWidth="400" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="voteCountCol" text="Vote Count" prefWidth="100"/>
+            <TableColumn fx:id="userNameCol" text="Listed Candidate" prefWidth="243"/>
+        </columns>
+    </TableView>
+</VBox>

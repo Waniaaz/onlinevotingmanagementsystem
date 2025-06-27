@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      alignment="TOP_CENTER"
+      spacing="20"
+      style="-fx-background-color: #f9f9f9;"
+      fx:controller="vms.pkg1.FormCastVoteController">
+
+    <!-- Header with navigation links -->
+    <HBox spacing="10"  alignment="CENTER_LEFT"
+          style="-fx-background-color: #333;">
+        <Button text="Login" style="-fx-background-color: transparent; -fx-text-fill: white;" onAction="#gotoLogin"/>
+        <Button text="Real Time Data" style="-fx-background-color: transparent; -fx-text-fill: white;" onAction="#gotoData"/>
+    </HBox>
+
+    <Label text="Cast Vote" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100" />
+            <ColumnConstraints halignment="LEFT" minWidth="200" />
+        </columnConstraints>
+
+        <!-- User Name -->
+        <Label text="CNIC (Voter):" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <ComboBox fx:id="comboCandidate" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+        <!-- User Password -->
+        <Label text="Candidate:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextField fx:id="txtVoterCNIC" promptText="Enter CNIC Number"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+
+    </GridPane>
+
+    <!-- Submit Button -->
+    <Button text="Cast Vote" fx:id="btnCastVote"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"
+            prefWidth="150" />
+
+</VBox>
